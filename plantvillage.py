@@ -101,5 +101,7 @@ def predict_image(image_path):
     class_names = list(train_generator.class_indices.keys())
     return class_names[class_index]
 
+model.save("plant_disease_model.h5")
+
 image_path = "PlantVillage/Tomato_Late_blight/test.JPG"
 print(f"Predicted Disease: {predict_image(image_path)}")
